@@ -1,0 +1,27 @@
+Danh sach lop AI_Green hien tai
+
+1. Lop nhan dang loai nam
+- black_termite_mushroom
+- lingzhi
+- oyster_mushroom
+- straw_mushroom
+- wood_ear
+
+2. Lop chan doan benh
+- healthy
+- green_mold
+- black_mold
+- white_mold
+- bacterial_rot
+- yellow_blotch
+
+3. Quy tac chan doan moc
+- green_mold, black_mold va white_mold la benh chung, khong gan voi rieng tung loai nam.
+- Khi tra ket qua chi noi: nam bi moc xanh, nam bi moc den, hoac nam bi moc trang.
+- Khong noi kieu: moc nhi bi moc trang, nam rom bi moc xanh, linh chi bi moc den.
+- Ly do: dau hieu moc xanh, moc den va moc trang o cac loai nam nhin gan giong nhau, nen model chan doan theo dau hieu benh chung.
+
+4. Luu y du lieu
+- Neu them anh cho cac lop moc, dua vao dung folder benh tuong ung.
+- Moi lop nen co tren 100 anh truoc khi split/train lai.
+- Anh moc trang de nham voi to nam khoe, nen can loc thu cong truoc khi train.

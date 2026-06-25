@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB NHÀ NẤM</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- ICON -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2><i data-lucide="leaf"></i> NHÀ NẤM</h2>
+      </div>
+
+      <button class="tab-btn active" data-tab="tongquan">
+        <i data-lucide="layout-dashboard"></i>
+        Tổng quan
+      </button>
+
+      <button class="tab-btn" data-tab="dieukhien">
+        <i data-lucide="sliders"></i>
+        Điều khiển
+      </button>
+
+      <button class="tab-btn" data-tab="bieudo">
+        <i data-lucide="line-chart"></i>
+        Biểu đồ
+      </button>
+
+      <button id="openAiGreenBtn" class="tab-btn ai-green-btn" type="button">
+        <i data-lucide="scan-search"></i>
+        AI_Green
+      </button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="topbar">
+        <h1 id="pageTitle">
+          <i data-lucide="layout-dashboard"></i>
+          Tổng quan hệ thống
+        </h1>
+
+        <div class="mode-control">
+          <span class="mode-label">Chế độ:</span>
+          <button id="btnManual" class="mode-btn">
+            <i data-lucide="hand"></i> MANUAL
+          </button>
+          <button id="btnAuto" class="mode-btn">
+            <i data-lucide="cpu"></i> AUTO
+          </button>
+        </div>
+      </header>
+
+      <!-- TAB 1 -->
+      <section id="tongquan" class="tab-content active">
+        <div class="grid-gauge">
+
+          <div class="gauge-card">
+            <h3><i data-lucide="sun"></i> Ánh sáng</h3>
+            <div id="gauge-anhsang" class="gauge"></div>
+            <div id="status-anhsang" class="gauge-status">Bình thường</div>
+          </div>
+
+          <div class="gauge-card">
+            <h3><i data-lucide="sprout"></i> Độ ẩm đất</h3>
+            <div id="gauge-amdat" class="gauge"></div>
+            <div id="status-amdat" class="gauge-status">Bình thường</div>
+          </div>
+
+          <div class="gauge-card">
+            <h3><i data-lucide="waves"></i> Độ mặn</h3>
+            <div id="gauge-doman" class="gauge"></div>
+            <div id="status-doman" class="gauge-status">Bình thường</div>
+          </div>
+
+          <div class="gauge-card">
+            <h3><i data-lucide="activity"></i> pH</h3>
+            <div id="gauge-ph" class="gauge"></div>
+            <div id="status-ph" class="gauge-status">Bình thường</div>
+          </div>
+
+          <div class="gauge-card">
+            <h3><i data-lucide="droplets"></i> Độ ẩm không khí</h3>
+            <div id="gauge-h" class="gauge"></div>
+            <div id="status-h" class="gauge-status">Bình thường</div>
+          </div>
+
+          <div class="gauge-card">
+            <h3><i data-lucide="thermometer"></i> Nhiệt độ</h3>
+            <div id="gauge-t" class="gauge"></div>
+            <div id="status-t" class="gauge-status">Bình thường</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 2 -->
+      <section id="dieukhien" class="tab-content">
+        <div class="control-layout">
+
+          <div class="panel">
+            <h3><i data-lucide="settings"></i> Điều khiển thiết bị</h3>
+            <div class="device-list" id="deviceControls"></div>
+          </div>
+
+          <div class="panel">
+            <h3><i data-lucide="sliders-horizontal"></i> Cài đặt ngưỡng</h3>
+            <div class="setting-list" id="settingControls"></div>
+            <button id="saveSettingsBtn" class="save-btn">
+              <i data-lucide="save"></i> Lưu cài đặt
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 3 -->
+      <section id="bieudo" class="tab-content">
+        <div class="chart-layout">
+
+          <div class="chart-box">
+            <div class="chart-header">
+              <h3><i data-lucide="activity"></i> Biểu đồ môi trường</h3>
+              <p>Nhiệt độ và độ ẩm theo thời gian</p>
+            </div>
+            <canvas id="chart-temp-humi" class="chart-view"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <div class="chart-header">
+              <h3><i data-lucide="sun"></i> Biểu đồ ánh sáng</h3>
+              <p>Cường độ ánh sáng theo thời gian</p>
+            </div>
+            <canvas id="chart-light" class="chart-view"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <div class="chart-header">
+              <h3><i data-lucide="sprout"></i> Biểu đồ độ ẩm đất</h3>
+              <p>Độ ẩm đất theo thời gian</p>
+            </div>
+            <canvas id="chart-soil-moisture" class="chart-view"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <div class="chart-header">
+              <h3><i data-lucide="waves"></i> Biểu đồ độ mặn</h3>
+              <p>Độ mặn theo thời gian</p>
+            </div>
+            <canvas id="chart-salinity" class="chart-view"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <div class="chart-header">
+              <h3><i data-lucide="activity"></i> Biểu đồ pH</h3>
+              <p>Giá trị pH theo thời gian</p>
+            </div>
+            <canvas id="chart-ph" class="chart-view"></canvas>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- AI_GREEN MODAL -->
+  <div id="aiGreenModal" class="ai-modal" aria-hidden="true">
+    <div class="ai-modal-backdrop" data-ai-close></div>
+
+    <section class="ai-dialog" role="dialog" aria-modal="true" aria-labelledby="aiGreenTitle">
+      <header class="ai-dialog-header">
+        <div>
+          <h2 id="aiGreenTitle"><i data-lucide="scan-search"></i> AI_Green</h2>
+          <p>Tách riêng tư vấn trồng và chẩn đoán để mở rộng model theo từng giai đoạn.</p>
+        </div>
+
+        <button id="closeAiGreenBtn" class="icon-btn" type="button" aria-label="Đóng AI_Green">
+          <i data-lucide="x"></i>
+        </button>
+      </header>
+
+      <div class="ai-mode-tabs" role="tablist" aria-label="Chọn luồng AI_Green">
+        <button class="ai-mode-btn active" type="button" data-ai-mode="advice" role="tab" aria-selected="true">
+          <i data-lucide="sprout"></i>
+          Tư vấn cây trồng
+        </button>
+        <button class="ai-mode-btn" type="button" data-ai-mode="diagnosis" role="tab" aria-selected="false">
+          <i data-lucide="stethoscope"></i>
+          Chẩn đoán bệnh
+        </button>
+      </div>
+
+      <div class="ai-dialog-body">
+        <div class="ai-input-panel">
+          <div class="ai-actions">
+            <label class="ai-action-btn" for="aiImageInput">
+              <i data-lucide="image-up"></i>
+              Chọn ảnh
+            </label>
+            <input id="aiImageInput" type="file" accept="image/*" hidden />
+
+            <button id="openCameraBtn" class="ai-action-btn" type="button">
+              <i data-lucide="camera"></i>
+              Mở camera
+            </button>
+          </div>
+
+          <video id="aiCameraView" class="ai-camera" autoplay playsinline hidden></video>
+
+          <button id="captureCameraBtn" class="secondary-btn" type="button" hidden>
+            <i data-lucide="aperture"></i>
+            Chụp ảnh
+          </button>
+
+          <div class="ai-preview-box">
+            <img id="aiImagePreview" alt="Ảnh nấm cần phân tích" hidden />
+            <span id="aiPreviewEmpty">Chưa có ảnh để phân tích</span>
+          </div>
+
+          <button id="analyzeAiGreenBtn" class="analyze-btn" type="button">
+            <i data-lucide="sparkles"></i>
+            Phân tích ảnh
+          </button>
+        </div>
+
+        <div id="aiAdvicePanel" class="ai-result-panel ai-mode-panel" data-ai-panel="advice">
+          <div id="aiResult" class="ai-result">
+            <div class="ai-empty-state">
+              <i data-lucide="leaf"></i>
+              <p>Kết quả nhận dạng nấm, khả năng trồng và tư vấn môi trường sẽ hiển thị ở đây.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="aiDiagnosisPanel" class="ai-result-panel ai-mode-panel" data-ai-panel="diagnosis" hidden>
+          <div id="aiDiagnosisResult" class="ai-result">
+            <div class="ai-empty-state">
+              <i data-lucide="microscope"></i>
+              <p>Kết quả chẩn đoán bệnh chung, mức độ và hướng xử lý sẽ hiển thị ở đây.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+
+  <!-- KÍCH HOẠT ICON -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

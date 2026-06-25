@@ -1,0 +1,10 @@
+{
+  "classes": [
+    "bacterial_rot",
+    "black_mold",
+    "green_mold",
+    "healthy",
+    "white_mold",
+    "yellow_blotch"
+  ]
+}

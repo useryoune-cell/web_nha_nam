@@ -1,0 +1,443 @@
+{
+  "unknown": {
+    "name_vi": "Chưa xác định được loại nấm",
+    "scientific_name": "",
+    "can_grow": "Chưa đủ căn cứ để tư vấn trồng chính xác.",
+    "difficulty": "Chưa đánh giá",
+    "overview": "Ảnh hiện tại chưa đủ rõ hoặc model chưa nhận ra đúng 1 trong 5 loại nấm mục tiêu. Nên chụp rõ phần tai nấm/mũ nấm, mặt dưới nếu có, cụm nấm và nền giá thể.",
+    "environment": {
+      "temperature": "Cần xác định loại nấm trước khi chốt nhiệt độ.",
+      "humidity": "Phần lớn nấm trồng cần ẩm không khí cao, nhưng không để nước đọng trên quả thể.",
+      "light": "Ưu tiên ánh sáng tán xạ nhẹ, tránh nắng trực tiếp.",
+      "water": "Tưới phun sương nhẹ, quan sát bề mặt nấm và giá thể.",
+      "ventilation": "Giữ thông gió vừa đủ để tránh bí khí và tích CO2."
+    },
+    "substrate": [
+      "Cần xác định loại nấm trước khi chọn giá thể."
+    ],
+    "growing_steps": [
+      "Chụp lại ảnh rõ hơn ở nơi đủ sáng.",
+      "Nếu có thể, chụp thêm ảnh toàn cụm và ảnh cận cảnh phần mũ/tai nấm.",
+      "So sánh với 5 nhóm mục tiêu: nấm bào ngư, linh chi, mối đen, rơm, mộc nhĩ."
+    ],
+    "farmer_tips": [
+      "Không nên áp dụng quy trình trồng khi chưa chắc loại nấm.",
+      "Mỗi loại nấm có nhiệt độ, giá thể và cách tưới khác nhau.",
+      "Nếu ảnh là nấm ngoài tự nhiên, không dùng kết quả này để quyết định ăn hay dùng làm giống."
+    ],
+    "harvest": "Chưa xác định.",
+    "note": "AI_Green hiện chỉ tư vấn trồng cho 5 loại nấm đã chọn, không chẩn đoán bệnh và không tư vấn dùng thuốc."
+  },
+  "diagnosis": {
+    "unknown": {
+      "name_vi": "Chưa xác định được tình trạng",
+      "severity": "Chưa đánh giá",
+      "summary": "Ảnh hiện tại chưa đủ rõ hoặc model chưa chắc về lớp bệnh. Cần chụp lại vùng nghi bệnh rõ hơn trước khi đưa ra quyết định xử lý mạnh.",
+      "signs": [
+        "Ảnh mờ, thiếu sáng, quá xa hoặc chỉ chụp một góc nhỏ nên không thấy rõ màu mốc, vết thối hay bề mặt quả thể.",
+        "Vùng nghi bệnh bị che bởi túi phôi, nền tối, tay cầm hoặc vật khác.",
+        "Dấu hiệu bệnh có thể nằm ở giá thể/phôi nhưng ảnh chỉ chụp phần tai nấm, hoặc ngược lại."
+      ],
+      "causes": [
+        "Ảnh đầu vào chưa đủ thông tin để phân biệt giữa nấm khỏe, mốc, thối nhũn và đốm vàng.",
+        "Một số bệnh giai đoạn sớm có biểu hiện rất giống nhau, đặc biệt là mốc trắng với tơ nấm khỏe.",
+        "Dữ liệu huấn luyện hiện tại vẫn còn hạn chế so với điều kiện ngoài trại thật."
+      ],
+      "actions": [
+        "Chụp lại 3 ảnh: toàn cụm/phôi, cận cảnh vùng nghi bệnh, và ảnh khu vực giá thể xung quanh.",
+        "Chụp dưới ánh sáng tán xạ, lấy nét rõ, giữ khoảng cách 20-40 cm tùy kích thước vùng bệnh.",
+        "Nếu vùng nghi bệnh đang lan nhanh, tạm cách ly phôi/cụm đó khỏi khu khỏe trong lúc chụp và kiểm tra lại.",
+        "Không phun thêm nước mạnh vào vùng nghi bệnh cho tới khi xác định rõ vì có thể làm bệnh lan nhanh hơn."
+      ],
+      "environment": {
+        "humidity": "Tạm giữ ẩm vừa phải, tránh để RH bão hòa 95-100% kéo dài khi chưa rõ bệnh.",
+        "temperature": "Giữ nhiệt độ đúng ngưỡng của loài đang trồng, tránh sốc nhiệt hoặc nóng ẩm bí khí.",
+        "ventilation": "Tăng thông thoáng nhẹ nếu phòng có mùi ẩm, bí hoặc nước đọng lâu sau tưới.",
+        "water": "Tạm giảm tưới trực tiếp lên quả thể; ưu tiên phun sương nền/không khí nếu cần giữ ẩm.",
+        "light": "Dùng ánh sáng tán xạ để quan sát màu bệnh rõ, không dùng nắng trực tiếp để soi lâu."
+      },
+      "note": "Khi chưa chắc lớp bệnh, ưu tiên cách ly, giảm nước đọng và chụp lại ảnh rõ hơn thay vì xử lý mạnh."
+    },
+    "healthy": {
+      "name_vi": "Có vẻ khỏe",
+      "severity": "Thấp",
+      "summary": "Ảnh giống mẫu nấm khỏe trong dữ liệu hiện tại. Chưa thấy mảng mốc xanh/đen/trắng, thối nhũn hoặc đốm vàng rõ.",
+      "signs": [
+        "Màu quả thể tương đối đồng đều, không có vùng đổi màu lan nhanh.",
+        "Không thấy mảng bông mốc xanh, đen hoặc trắng bất thường trên tai nấm/giá thể.",
+        "Bề mặt không bị nhớt, nhũn, thâm nước hoặc có vết vàng nâu rõ.",
+        "Cụm nấm giữ hình dạng bình thường, không cong queo quá mức do bí CO2 hoặc thiếu ẩm."
+      ],
+      "causes": [
+        "Điều kiện hiện tại có thể đang phù hợp với loài nấm được trồng.",
+        "Ảnh chưa ghi nhận vùng bệnh; nếu chỉ chụp một góc nhỏ vẫn cần kiểm tra toàn bộ khu trồng.",
+        "Bệnh mới phát sinh có thể chưa biểu hiện rõ trong ảnh."
+      ],
+      "actions": [
+        "Tiếp tục duy trì lịch tưới và thông gió hiện tại nếu nấm vẫn phát triển đều.",
+        "Kiểm tra mỗi ngày 1-2 lần: màu lạ, mùi chua/ẩm mốc, vùng nhớt, nước đọng và mảng mốc lan nhanh.",
+        "Vệ sinh sàn, kệ, dao kéo và tay hái trước/sau khi thao tác để giảm nguồn nhiễm.",
+        "Không tăng tưới đột ngột nếu nấm đang khỏe; chỉ chỉnh khi thấy mép khô hoặc giá thể quá khô."
+      ],
+      "environment": {
+        "humidity": "Giữ RH theo loài: thường 80-95% trong giai đoạn ra quả thể, nhưng tránh ướt bề mặt kéo dài.",
+        "temperature": "Duy trì đúng ngưỡng của loài; tránh dao động ngày/đêm quá mạnh làm nấm yếu.",
+        "ventilation": "Thông gió đều; nếu thấy cuống dài/tai nhỏ hoặc phòng có mùi bí, tăng đổi khí.",
+        "water": "Phun sương mịn, để bề mặt nấm ráo tương đối sau 15-30 phút; không để giọt nước lớn bám lâu.",
+        "light": "Ánh sáng tán xạ đúng loài, tránh nắng trực tiếp gây nóng và khô mép."
+      },
+      "note": "Kết quả khỏe không có nghĩa là bỏ theo dõi; bệnh nấm thường lan nhanh nếu môi trường quá ẩm và bí."
+    },
+    "green_mold": {
+      "name_vi": "Mốc xanh",
+      "severity": "Cao",
+      "summary": "Nấm có dấu hiệu bị mốc xanh. Đây là lớp bệnh chung cho mọi loại nấm, không cần nói cụ thể loài nào bị bệnh.",
+      "signs": [
+        "Xuất hiện mảng xanh lục, xanh rêu hoặc xanh xám trên giá thể, phôi hoặc gần gốc quả thể.",
+        "Ban đầu có thể là mảng trắng tơ lạ, sau đó chuyển xanh khi tạo bào tử.",
+        "Vết bệnh thường lan nhanh theo vùng ẩm, có thể làm tơ nấm trồng yếu hoặc ngừng phát triển.",
+        "Nếu chạm mạnh hoặc tưới trực tiếp, bào tử xanh dễ phát tán sang phôi/cụm bên cạnh."
+      ],
+      "causes": [
+        "Giá thể/phôi bị nhiễm tạp từ khâu hấp, cấy giống hoặc bảo quản.",
+        "Nhà trồng quá ẩm, thông gió kém, nền/kệ bẩn hoặc nước đọng lâu.",
+        "Tưới mạnh trực tiếp lên vùng nhiễm làm bào tử lan rộng.",
+        "Phôi yếu do nhiệt độ không phù hợp, thiếu thông thoáng hoặc bị sốc môi trường."
+      ],
+      "actions": [
+        "Cách ly ngay phôi/cụm nghi nhiễm; nếu nhiễm nặng nên đưa ra khỏi khu sản xuất trong túi kín.",
+        "Không xịt nước trực tiếp vào mảng xanh. Tạm giảm tưới vùng đó trong 12-24 giờ và tăng thông thoáng nhẹ.",
+        "Thu gom phần nhiễm bằng thao tác nhẹ, đeo găng/khẩu trang; vệ sinh dụng cụ sau khi chạm vùng bệnh.",
+        "Kiểm tra các phôi xung quanh trong bán kính gần nhất mỗi ngày 1-2 lần trong 3-5 ngày.",
+        "Rà lại khâu hấp/thanh trùng, vệ sinh phòng cấy, nước tưới, kệ và nền vì mốc xanh thường liên quan nguồn nhiễm tạp."
+      ],
+      "environment": {
+        "humidity": "Tạm giảm RH khu nhiễm xuống khoảng 80-85% nếu loài nấm chịu được, tránh ẩm bão hòa 95-100% kéo dài.",
+        "temperature": "Giữ đúng ngưỡng loài đang trồng; tránh nóng ẩm bí khí vì mốc xanh lan nhanh hơn khi phôi yếu.",
+        "ventilation": "Tăng đổi khí có kiểm soát; không thổi quạt mạnh trực tiếp vào mảng mốc để tránh phát tán bào tử.",
+        "water": "Chỉ phun sương mịn nền/không khí, tránh phun lên mảng xanh và tránh nước chảy từ phôi bệnh sang phôi khỏe.",
+        "light": "Giữ ánh sáng tán xạ để dễ phát hiện mảng xanh mới; không dùng nắng trực tiếp để xử lý."
+      },
+      "note": "Mốc xanh là bệnh chung. Khi trả kết quả chỉ nói nấm bị mốc xanh, không gắn với tên loài nấm."
+    },
+    "black_mold": {
+      "name_vi": "Mốc đen",
+      "severity": "Cao",
+      "summary": "Nấm có dấu hiệu bị mốc đen. Đây là lớp bệnh chung, xử lý theo hướng cách ly, giảm phát tán bào tử và kiểm soát ẩm.",
+      "signs": [
+        "Mảng đen, xám đen hoặc bột đen trên giá thể, phôi, chân nấm hoặc bề mặt quả thể.",
+        "Vết có thể khô bột, đóng mảng hoặc lan thành các đốm sẫm màu.",
+        "Khu nhiễm nặng có thể có mùi ẩm mốc, bề mặt phôi xấu và tơ nấm trồng yếu.",
+        "Khi rung/chạm mạnh, bột đen có thể phát tán sang khu xung quanh."
+      ],
+      "causes": [
+        "Nguồn bào tử từ không khí, kệ bẩn, dụng cụ, túi phôi cũ hoặc giá thể nhiễm tạp.",
+        "Độ ẩm cao kéo dài nhưng thiếu thông gió, làm bề mặt phôi luôn ướt.",
+        "Vệ sinh sau thu hoạch chưa kỹ, xác nấm già hoặc phần thối bị bỏ sót.",
+        "Nước tưới hoặc vòi phun bẩn có thể mang nguồn nhiễm."
+      ],
+      "actions": [
+        "Đưa mẫu nhiễm nặng ra khỏi khu trồng trong túi kín, hạn chế rung lắc để tránh bụi bào tử bay.",
+        "Ngưng phun trực tiếp vào vùng đen; lau dọn nước đọng và vật liệu hữu cơ mục quanh khu nhiễm.",
+        "Vệ sinh kệ, nền, dao kéo, khay chứa; thao tác từ khu khỏe sang khu bệnh, không làm ngược lại.",
+        "Tăng thông thoáng nhẹ trong 1-2 ngày, theo dõi xem mảng đen có lan sang phôi lân cận không.",
+        "Nếu mốc đen xuất hiện nhiều điểm cùng lúc, cần kiểm tra lại nguồn phôi, giá thể, nước và vệ sinh nhà trồng."
+      ],
+      "environment": {
+        "humidity": "Giữ RH vừa đủ theo loài, tránh nước đọng. Với khu nhiễm, ưu tiên giảm ẩm dư hơn là tưới thêm.",
+        "temperature": "Tránh nóng ẩm bí khí; giữ nhiệt ổn định để nấm trồng không bị stress.",
+        "ventilation": "Tăng thông gió nhưng tránh quạt thổi trực tiếp vào mảng đen vì dễ phát tán bào tử.",
+        "water": "Không phun lên mảng đen; vệ sinh vòi phun và kiểm tra nguồn nước nếu bệnh lặp lại.",
+        "light": "Ánh sáng tán xạ giúp phát hiện đốm đen mới, tránh để khu trồng tối ẩm kéo dài."
+      },
+      "note": "Mốc đen là bệnh chung. Khi trả kết quả chỉ nói nấm bị mốc đen, không gắn với tên loài nấm."
+    },
+    "white_mold": {
+      "name_vi": "Mốc trắng",
+      "severity": "Trung bình đến cao",
+      "summary": "Nấm có dấu hiệu bị mốc trắng. Cần phân biệt với tơ nấm khỏe: mốc trắng thường bông/xốp bất thường, lan nhanh và xuất hiện sai vị trí.",
+      "signs": [
+        "Mảng trắng bông, xốp, dày bất thường trên giá thể, chân nấm hoặc phủ lên quả thể.",
+        "Vết trắng lan nhanh trong môi trường ẩm bí; có thể làm quả thể yếu, mềm hoặc biến dạng.",
+        "Khác với tơ nấm khỏe: tơ khỏe thường trắng đều, bám trong giá thể/phôi; mốc trắng bệnh thường nổi bông trên bề mặt và lan sang vùng không mong muốn.",
+        "Một số trường hợp mốc trắng về sau có thể đổi màu hoặc kéo theo mùi ẩm mốc."
+      ],
+      "causes": [
+        "Độ ẩm quá cao, thiếu thông gió, bề mặt phôi/quả thể ướt lâu.",
+        "Giá thể hoặc phôi bị nhiễm tạp, dụng cụ thao tác không sạch.",
+        "Tưới dày, tưới mạnh làm nước đọng và tạo vùng vi khí hậu ẩm cục bộ.",
+        "Vệ sinh nền/kệ chưa tốt, xác nấm hoặc phần thải hữu cơ để lâu trong nhà trồng."
+      ],
+      "actions": [
+        "Cách ly phôi/cụm nghi nhiễm để quan sát. Không trộn hoặc đặt sát phôi khỏe.",
+        "Tạm giảm tưới trực tiếp 12-24 giờ ở vùng nghi nhiễm; chỉ giữ ẩm nền/không khí nếu cần.",
+        "Tăng thông gió nhẹ, tránh gió mạnh thổi thẳng vào mảng trắng.",
+        "Nếu mảng trắng lan nhanh, dày lên hoặc chuyển màu, xử lý như nhiễm mốc: loại bỏ phần nhiễm nặng và vệ sinh khu vực.",
+        "So sánh với ảnh tơ nấm khỏe cùng loài: nếu vùng trắng nằm đúng trong phôi và không lan bất thường thì có thể là tơ khỏe, cần chụp thêm để xác nhận."
+      ],
+      "environment": {
+        "humidity": "Giảm ẩm dư; tránh RH 95-100% kéo dài. Với khu nghi nhiễm nên giữ khoảng 80-88% nếu loài nấm chịu được.",
+        "temperature": "Giữ nhiệt đúng ngưỡng loài trồng, tránh nóng ẩm bí khí làm mốc lan nhanh.",
+        "ventilation": "Tăng trao đổi khí nhẹ sau tưới để bề mặt ráo tương đối trong 15-30 phút.",
+        "water": "Phun sương mịn, không để giọt nước lớn bám lâu; không tưới trực tiếp lên mảng trắng nghi bệnh.",
+        "light": "Ánh sáng tán xạ giúp nhìn rõ ranh giới mảng trắng, tránh nắng trực tiếp làm khô/sốc nấm."
+      },
+      "note": "Mốc trắng là bệnh chung. Khi trả kết quả chỉ nói nấm bị mốc trắng, không gắn với tên loài nấm."
+    },
+    "bacterial_rot": {
+      "name_vi": "Thối nhũn / thối vi khuẩn",
+      "severity": "Trung bình đến cao",
+      "summary": "Nấm có dấu hiệu thối nhũn hoặc bệnh vi khuẩn: mô mềm, ướt, nhớt hoặc có mùi lạ. Bệnh thường nặng lên khi nước đọng và thông gió kém.",
+      "signs": [
+        "Quả thể mềm bất thường, nhũn, ướt bóng hoặc có lớp nhớt trên bề mặt.",
+        "Vết bệnh có thể chuyển vàng nâu, xám hoặc thâm nước, lan từ mép/đỉnh tai xuống thân.",
+        "Có thể có mùi chua, tanh nhẹ hoặc mùi hư khi nhiễm nặng.",
+        "Thường xuất hiện sau giai đoạn tưới nhiều, phòng quá ẩm hoặc cụm nấm quá dày."
+      ],
+      "causes": [
+        "Nước đọng trên quả thể lâu, đặc biệt sau tưới buổi chiều/tối hoặc phòng thiếu gió.",
+        "Độ ẩm cao nhưng bề mặt nấm không kịp ráo.",
+        "Nguồn nước, vòi phun, tay hái hoặc dụng cụ mang vi khuẩn.",
+        "Mật độ cụm dày, không khí kém lưu thông giữa các tai nấm."
+      ],
+      "actions": [
+        "Loại bỏ quả thể/cụm bị nhũn nặng, cho vào túi riêng; không để rơi nước bệnh xuống phôi khỏe.",
+        "Giảm tưới trực tiếp lên quả thể trong 12-24 giờ, chuyển sang tạo ẩm nền/không khí.",
+        "Tăng thông gió sau mỗi lần tưới để bề mặt nấm ráo trong khoảng 15-30 phút.",
+        "Vệ sinh vòi phun, dao kéo, khay thu hái và tay thao tác; không hái từ vùng bệnh rồi sang vùng khỏe.",
+        "Điều chỉnh mật độ và tỉa bớt cụm quá dày nếu thường xuyên bị ướt bí."
+      ],
+      "environment": {
+        "humidity": "Không để ẩm bão hòa kéo dài. Tạm giữ RH khoảng 80-88% ở khu bị bệnh nếu loài nấm chịu được.",
+        "temperature": "Tránh nóng ẩm bí khí; nhiệt cao kèm nước đọng làm thối nhũn tiến triển rất nhanh.",
+        "ventilation": "Tăng lưu thông khí sau tưới, đặc biệt buổi chiều/tối; tránh phòng đóng kín qua đêm khi bề mặt còn ướt.",
+        "water": "Giảm số lần tưới hoặc lượng tưới; dùng hạt sương mịn, tránh giọt lớn đọng trên tai nấm.",
+        "light": "Giữ ánh sáng tán xạ để dễ phát hiện vết thâm nước, không dùng nắng trực tiếp để làm khô bệnh."
+      },
+      "note": "Không tự dùng thuốc/kháng sinh. Với nấm ăn, ưu tiên vệ sinh, loại bỏ mẫu bệnh, giảm nước đọng và tăng thông gió."
+    },
+    "yellow_blotch": {
+      "name_vi": "Đốm vàng",
+      "severity": "Trung bình",
+      "summary": "Nấm có dấu hiệu đốm vàng hoặc vết vàng nâu trên bề mặt. Thường liên quan nước đọng, độ ẩm cao kéo dài, tổn thương cơ học hoặc vệ sinh nước tưới chưa tốt.",
+      "signs": [
+        "Xuất hiện đốm vàng, vàng nâu hoặc mảng úa trên tai/quả thể.",
+        "Vết thường rõ hơn ở vùng hay đọng nước hoặc nơi bị chạm/tổn thương.",
+        "Nếu nặng, vết vàng lan rộng, bề mặt kém đẹp và giảm giá trị thương phẩm.",
+        "Khác với nấm già: đốm bệnh thường cục bộ, không đều và có thể đi kèm vùng ướt/thâm."
+      ],
+      "causes": [
+        "Nước tưới đọng trên bề mặt quá lâu, nhất là khi thông gió yếu.",
+        "Phun giọt lớn hoặc tưới mạnh làm tổn thương bề mặt nấm.",
+        "Nguồn nước/vòi phun không sạch, nhà trồng nhiều chất hữu cơ bẩn.",
+        "Cụm nấm quá dày, hơi ẩm kẹt giữa các tai nấm."
+      ],
+      "actions": [
+        "Giảm tưới trực tiếp lên quả thể; ưu tiên phun sương mịn vào không khí/nền.",
+        "Tăng thông gió sau tưới để bề mặt khô tương đối trong 15-30 phút.",
+        "Loại bỏ quả thể bị đốm nặng nếu ảnh hưởng chất lượng bán hoặc có dấu hiệu thối kèm theo.",
+        "Vệ sinh vòi phun và kiểm tra nguồn nước; nếu bệnh lặp lại nhiều, cần thay/khử vệ sinh hệ thống tưới theo quy trình an toàn.",
+        "Thu hoạch đúng tuổi, tránh để nấm quá già vì mô già dễ vàng và dễ nhiễm phụ."
+      ],
+      "environment": {
+        "humidity": "Giữ RH theo loài nhưng tránh bề mặt quả thể ướt lâu; khu bị đốm nên giảm ẩm dư tạm thời.",
+        "temperature": "Tránh nóng ẩm kéo dài; nhiệt cao làm vết vàng và thối phụ phát triển nhanh hơn.",
+        "ventilation": "Tăng lưu thông khí nhẹ sau tưới, tránh cụm quá dày bị bí hơi.",
+        "water": "Dùng phun sương mịn, giảm giọt lớn; không tưới mạnh vào tai nấm.",
+        "light": "Ánh sáng tán xạ giúp quan sát vết vàng sớm; tránh nắng trực tiếp làm cháy/vàng mô."
+      },
+      "note": "Cần phân biệt đốm vàng bệnh với vàng do nấm già, khô mép hoặc ánh sáng/nắng gắt."
+    }
+  },
+  "mushrooms": {
+    "oyster_mushroom": {
+      "name_vi": "Nấm bào ngư",
+      "scientific_name": "Pleurotus ostreatus",
+      "aliases": [
+        "nấm sò",
+        "oyster mushroom",
+        "Pleurotus"
+      ],
+      "can_grow": "Rất phù hợp để trồng hộ gia đình, trại nhỏ hoặc nhà nấm. Đây là loài dễ làm nhất trong 5 loài vì ăn được nhiều loại phụ phẩm nông nghiệp và chu kỳ nhanh.",
+      "difficulty": "Dễ đến trung bình",
+      "overview": "Nấm bào ngư mọc thành cụm, tai nấm dạng quạt/sò. Quy trình nên tách 2 giai đoạn rõ: ủ tơ kín ở khoảng 24-28°C, sau đó kích thích ra quả thể mát hơn khoảng 18-26°C. Nếu CO2 cao, cuống sẽ dài và tai nhỏ; nếu thiếu ẩm, mép tai khô và cong.",
+      "environment": {
+        "temperature": "Ủ tơ: 24-28°C. Ra quả thể: 18-26°C là đẹp; vẫn có thể ra ở 20-30°C tùy giống nhưng trên 30°C dễ nhỏ tai, vàng mép và nhiễm tạp.",
+        "humidity": "Ủ tơ giữ bịch kín, không cần phun trực tiếp. Khi ra quả thể duy trì RH 85-95%; nếu mép tai khô thì tăng ẩm, nếu tai nhớt/nước đọng thì giảm phun và tăng gió.",
+        "light": "Cần ánh sáng tán xạ 500-1000 lux, khoảng 8-12 giờ/ngày. Không để nắng trực tiếp chiếu vào tai nấm.",
+        "water": "Phun sương mịn 2-4 lần/ngày tùy thời tiết. Phun vào không khí/nền/kệ là chính, hạn chế xịt mạnh trực tiếp lên tai nấm; sau tưới 15-30 phút phải còn thoáng, không đọng giọt lớn.",
+        "ventilation": "Cần trao đổi khí mạnh hơn giai đoạn ủ. Mục tiêu CO2 dưới khoảng 1000-1500 ppm nếu có cảm biến; nếu không có, quan sát cuống dài bất thường là dấu hiệu thiếu gió."
+      },
+      "substrate": [
+        "Mùn cưa cao su, rơm, bã mía, lõi bắp hoặc bông phế; nguyên liệu phải sạch, không mốc, độ ẩm giá thể khoảng 60-65%.",
+        "Công thức đơn giản: mùn cưa 100 kg + cám gạo 5-10 kg + vôi 1-2 kg, điều chỉnh ẩm vừa tay rồi hấp/thanh trùng.",
+        "pH sau phối trộn nên khoảng 6.5-7.5. Bịch phôi đạt yêu cầu khi tơ trắng đều, không có mảng xanh/đen/vàng lạ."
+      ],
+      "growing_steps": [
+        "Xử lý giá thể: băm nhỏ rơm hoặc sàng mùn cưa, phối trộn dinh dưỡng, chỉnh ẩm 60-65%, đóng bịch và hấp/thanh trùng.",
+        "Cấy giống trong điều kiện sạch; tỷ lệ giống thường 2-5% khối lượng ướt của giá thể.",
+        "Ủ tơ 12-20 ngày ở 24-28°C, tối hoặc ánh sáng yếu, không tưới trực tiếp lên bịch.",
+        "Khi tơ phủ trắng 90-100%, rạch/mở miệng bịch, chuyển sang phòng ra nấm 18-26°C, RH 85-95%, có ánh sáng tán xạ và thông gió.",
+        "Sau khi xuất hiện mầm 3-5 ngày, giữ ẩm đều và tăng gió để tai nấm mở rộng; thường thu lứa đầu sau 5-7 ngày kể từ khi ra mầm."
+      ],
+      "farmer_tips": [
+        "Cuống dài, tai nhỏ: thiếu thông gió hoặc CO2 cao, cần mở quạt/đổi khí nhiều hơn.",
+        "Mép tai khô, nứt: thiếu ẩm hoặc gió thổi trực tiếp, cần tăng phun sương và đổi hướng gió.",
+        "Tai nhớt, vàng, dễ thối: phun quá nhiều hoặc phòng bí ẩm, cần giảm nước và tăng thông thoáng."
+      ],
+      "harvest": "Thu khi mép tai còn hơi cong xuống, tai vừa bung, đường kính thường 5-10 cm tùy giống. Không để mép tai phẳng quá lâu vì nấm già nhanh, dai và phát tán nhiều bào tử.",
+      "note": "Thông số nên tinh chỉnh theo giống và thời tiết địa phương, nhưng cần luôn giữ 3 điểm chính: ẩm cao, không đọng nước, thông gió tốt."
+    },
+    "lingzhi": {
+      "name_vi": "Nấm linh chi",
+      "scientific_name": "Ganoderma lucidum",
+      "aliases": [
+        "reishi",
+        "lingzhi",
+        "Ganoderma"
+      ],
+      "can_grow": "Trồng được nhưng chu kỳ dài hơn nấm bào ngư, cần kiểm soát nhiệt độ, ẩm, ánh sáng và CO2 ổn định để quả thể dày, màu đẹp.",
+      "difficulty": "Trung bình",
+      "overview": "Linh chi là nấm dược liệu, thường trồng trên mùn cưa gỗ cứng hoặc khúc gỗ. Có thể điều khiển hình dạng: CO2 cao tạo dạng sừng/hươu, thông gió và ánh sáng tốt giúp tán xòe thành tai. Giai đoạn ủ tơ cần ấm và tối; giai đoạn ra quả thể cần ẩm cao, ánh sáng tán xạ và thông gió vừa phải.",
+      "environment": {
+        "temperature": "Ủ tơ: 25-30°C, tối ưu gần 28°C. Ra quả thể: 24-30°C; khi tai đã hình thành có thể hạ về 24-26°C để màu đỏ nâu dày và cứng hơn.",
+        "humidity": "Ủ tơ giữ bịch kín. Khi tạo mầm giữ RH 90-95%; khi tai đã xòe giảm còn 80-90%; giai đoạn làm dày/mature có thể 70-80% để mặt tai cứng và ít thối.",
+        "light": "Cần ánh sáng tán xạ khoảng 500-1000 lux, 8-12 giờ/ngày khi ra quả thể. Thiếu sáng quả thể nhạt màu và hướng mọc kém.",
+        "water": "Phun sương nền và không khí 2-3 lần/ngày; hạn chế làm ướt trực tiếp mặt tai lâu vì dễ đốm, thối hoặc bẩn bề mặt bóng.",
+        "ventilation": "Ủ tơ không cần gió mạnh. Khi ra quả thể cần thông gió đều; CO2 cao làm cuống/sừng kéo dài, muốn tai xòe thì tăng gió và giữ CO2 khoảng dưới 1000-1500 ppm."
+      },
+      "substrate": [
+        "Mùn cưa cao su hoặc gỗ cứng 100 kg + cám gạo/cám mì 10-15 kg + vôi 1-2 kg; độ ẩm giá thể khoảng 60-65%.",
+        "Có thể trồng trên khúc gỗ nhưng chu kỳ dài hơn; bản demo/trại nhỏ nên dùng bịch mùn cưa đã hấp/thanh trùng.",
+        "Không dùng mùn gỗ có tinh dầu mạnh, mùn mục mốc hoặc nguyên liệu đã nhiễm tạp."
+      ],
+      "growing_steps": [
+        "Phối trộn mùn cưa, cám và vôi; chỉnh ẩm 60-65%, đóng bịch chặt vừa và hấp/thanh trùng kỹ.",
+        "Cấy giống sạch, ủ tơ 30-45 ngày ở 25-30°C đến khi tơ phủ trắng và chắc bịch.",
+        "Mở cổ/rạch điểm ra quả thể, đưa vào phòng 24-30°C, RH 90-95%, ánh sáng tán xạ 500-1000 lux.",
+        "Khi mầm kéo dài 2-5 cm, điều chỉnh gió: giữ CO2 cao nếu muốn dạng sừng, tăng gió nếu muốn tai xòe.",
+        "Giai đoạn tai xòe và làm dày kéo dài nhiều tuần; giữ RH 80-90%, tránh nước đọng trên mặt tai."
+      ],
+      "farmer_tips": [
+        "Tai mỏng, méo hoặc chỉ mọc sừng dài: thường do thiếu gió hoặc thiếu sáng.",
+        "Mặt tai có đốm, thâm hoặc mốc: thường do nước đọng và phòng quá ẩm bí.",
+        "Linh chi không cần tưới nhiều như bào ngư; ưu tiên ẩm không khí và nền thay vì làm ướt quả thể."
+      ],
+      "harvest": "Thu khi viền sinh trưởng màu trắng/vàng nhạt gần như hết, tai chuyển đỏ nâu bóng, cứng và bắt đầu có lớp bào tử nâu. Thường 60-90 ngày sau mở bịch tùy giống và điều kiện.",
+      "note": "Nếu bán dược liệu, cần quy trình sạch, phơi/sấy dưới 45-50°C để giữ màu và hạn chế mốc sau thu hoạch."
+    },
+    "black_termite_mushroom": {
+      "name_vi": "Nấm mối đen",
+      "scientific_name": "Termitomyces sp.",
+      "aliases": [
+        "black termite mushroom",
+        "Termitomyces",
+        "nấm mối"
+      ],
+      "can_grow": "Có thể trồng nhưng khó hơn bào ngư, rơm và mộc nhĩ. Nên dùng phôi/giống thương mại đã ổn định, không nên tự tách giống nếu chưa có phòng sạch.",
+      "difficulty": "Khó",
+      "overview": "Nấm mối đen nhạy với giống, giá thể và dao động môi trường. Mục tiêu là giữ phôi khỏe, nhiệt ổn định và kích thích ra quả thể bằng ẩm cao, ánh sáng nhẹ, thông gió vừa. Đây là loài nên thử quy mô nhỏ trước khi mở rộng.",
+      "environment": {
+        "temperature": "Ủ tơ: 25-28°C. Kích thích ra quả thể: 24-28°C; tránh vượt 30°C kéo dài vì phôi dễ yếu và nhiễm tạp.",
+        "humidity": "Ủ tơ giữ bịch/luống ổn định, không quá ướt. Ra quả thể giữ RH 85-92%; nền/đất phủ ẩm nhưng không sũng nước.",
+        "light": "Ánh sáng tán xạ nhẹ 300-700 lux, 8-10 giờ/ngày. Không cần sáng mạnh, tránh nắng trực tiếp.",
+        "water": "Tưới phun sương nhẹ để giữ ẩm lớp phủ. Không tưới thành dòng mạnh vì dễ làm sốc mầm, nén mặt giá thể hoặc gây úng.",
+        "ventilation": "Thông gió vừa phải, tránh bí khí nhưng cũng tránh gió khô thổi trực tiếp. Nếu mầm dài yếu hoặc mặt luống có mùi chua, cần tăng thông thoáng."
+      },
+      "substrate": [
+        "Nên dùng công thức phôi/giá thể đi kèm giống thương mại của nhà cung cấp, vì mỗi dòng giống có yêu cầu khác nhau.",
+        "Vật liệu thường là mùn cưa/compost hữu cơ đã xử lý, có thể phối phụ phẩm nông nghiệp; độ ẩm giá thể khoảng 60-65%.",
+        "Lớp phủ/đất phủ phải sạch, tơi, giữ ẩm tốt nhưng thoát nước; không dùng đất bẩn hoặc có mùi chua."
+      ],
+      "growing_steps": [
+        "Bắt đầu bằng phôi giống ổn định từ nguồn uy tín, thử 20-50 bịch/khay trước khi làm lớn.",
+        "Ủ phôi 25-28°C, tối hoặc ánh sáng yếu, theo dõi tơ lan đều và không có mùi lạ.",
+        "Khi phôi đạt yêu cầu, chuyển sang khu ra nấm, phủ lớp giữ ẩm nếu quy trình giống yêu cầu.",
+        "Duy trì 24-28°C, RH 85-92%, ánh sáng tán xạ và phun sương nhẹ cho đến khi mầm xuất hiện.",
+        "Ghi lại từng ngày: nhiệt độ, RH, số lần tưới, ngày ra mầm, tỷ lệ phôi ra nấm để chỉnh cho lứa sau."
+      ],
+      "farmer_tips": [
+        "Nếu phôi không ra nấm dù tơ trắng: có thể sai giống, sai lớp phủ, thiếu sốc môi trường hoặc thông số chưa phù hợp.",
+        "Nếu mặt giá thể úng hoặc có mùi chua: giảm tưới, tăng thoáng và kiểm tra vệ sinh nước tưới.",
+        "Không thay quá nhiều yếu tố cùng lúc; mỗi lần chỉ chỉnh một yếu tố để biết nguyên nhân."
+      ],
+      "harvest": "Thu khi nấm đạt kích thước thương phẩm, mũ còn chắc, chưa già và chưa mềm nhũn. Nên hái cả cụm/nhổ nhẹ, vệ sinh chân nấm và tránh làm hỏng mầm kế tiếp.",
+      "note": "Thông số nấm mối đen phụ thuộc mạnh vào dòng giống thương mại; phần tư vấn này là khung thực hành để kiểm soát trại, không thay thế quy trình riêng của nhà cung cấp giống."
+    },
+    "straw_mushroom": {
+      "name_vi": "Nấm rơm",
+      "scientific_name": "Volvariella volvacea",
+      "aliases": [
+        "straw mushroom",
+        "Volvariella"
+      ],
+      "can_grow": "Rất phù hợp vùng nóng ẩm, có thể trồng trên rơm rạ, bông phế hoặc phụ phẩm giàu cellulose. Chu kỳ nhanh nhưng rất nhạy với nhiệt độ và nước tưới.",
+      "difficulty": "Trung bình",
+      "overview": "Nấm rơm là loài ưa nhiệt. Khác với bào ngư, nấm rơm cần nhiệt cao hơn: tơ phát triển tốt khoảng 32-35°C và ra quả thể tốt khoảng 28-32°C. Nếu lạnh dưới 25°C, nấm chậm hoặc không ra; nếu tưới nhiều làm mô nguội, năng suất giảm nhanh.",
+      "environment": {
+        "temperature": "Giai đoạn tơ ăn mô: 32-35°C. Giai đoạn hình thành nụ/quả thể: 28-32°C. Tránh dưới 25°C và tránh trên 38°C kéo dài.",
+        "humidity": "Độ ẩm không khí 80-90%. Độ ẩm mô rơm khoảng 65-70%; nắm rơm thấy ẩm nhưng không chảy nước thành dòng.",
+        "light": "Ánh sáng nhẹ/tán xạ 300-700 lux là đủ. Không cần nắng trực tiếp; nắng gắt làm khô mô và nóng cục bộ.",
+        "water": "Tưới nhẹ quanh mô hoặc phun sương; không tưới nhiều sau khi đã có nụ vì dễ làm nụ thối và làm giảm nhiệt mô.",
+        "ventilation": "Thoáng vừa phải. Cần tránh bí hơi nhưng không để gió mạnh làm khô mô rơm và giảm nhiệt."
+      },
+      "substrate": [
+        "Rơm rạ sạch, không mốc, không dính thuốc; có thể phối bông phế hoặc phụ phẩm giàu cellulose.",
+        "Rơm cần xử lý nước vôi/ủ nhiệt hoặc hấp tùy quy trình để giảm tạp nhiễm; pH nên hơi kiềm nhẹ khoảng 7-8.",
+        "Mô nấm cần giữ ẩm 65-70%, xếp vừa chặt để giữ nhiệt nhưng không nén quá bí."
+      ],
+      "growing_steps": [
+        "Ngâm/xử lý rơm, để ráo đến khi bóp chỉ rịn ẩm, không chảy nước mạnh.",
+        "Xếp mô hoặc đóng khay, cấy giống theo lớp; giữ mô ấm 32-35°C trong 3-5 ngày đầu.",
+        "Sau khi tơ lan, mở thoáng dần, giữ 28-32°C, RH 80-90%, ánh sáng nhẹ.",
+        "Khi thấy nụ/trứng nấm, tưới rất nhẹ nếu khô; tránh tưới trực tiếp làm nụ thối.",
+        "Thu liên tục vì nấm rơm lớn rất nhanh; kiểm tra sáng và chiều trong thời kỳ rộ."
+      ],
+      "farmer_tips": [
+        "Nấm rơm lạnh là chậm ngay: nếu đêm lạnh, cần che giữ nhiệt hoặc giảm thông gió ban đêm.",
+        "Mô quá ướt sẽ chua, nóng bất thường hoặc thối nụ; mô quá khô thì nụ nhỏ và chết non.",
+        "Không dùng nước lạnh tưới mạnh vào mô đang ra nấm vì làm sốc nhiệt và giảm năng suất."
+      ],
+      "harvest": "Thu tốt nhất ở giai đoạn trứng hoặc búp, trước khi mũ bung. Thường bắt đầu thu sau 9-14 ngày tùy quy trình và thời tiết; nấm đã bung mũ thì chất lượng và giá bán giảm.",
+      "note": "Với nấm rơm, cảm biến nhiệt độ là quan trọng nhất. Nên đặt cảm biến gần mô nấm, không chỉ đo nhiệt độ phòng."
+    },
+    "wood_ear": {
+      "name_vi": "Mộc nhĩ",
+      "scientific_name": "Auricularia polytricha",
+      "aliases": [
+        "nấm mèo",
+        "wood ear",
+        "Auricularia"
+      ],
+      "can_grow": "Trồng được trên mùn cưa hoặc gỗ, phù hợp nhà nấm ẩm cao. Loài này cần nhiều ẩm hơn bào ngư nhưng vẫn phải thoáng để tai dày, sạch và không nhớt.",
+      "difficulty": "Dễ đến trung bình",
+      "overview": "Mộc nhĩ tạo tai dạng mỏng, dai, ưa ẩm cao. Giai đoạn ủ tơ thường ở 25-28°C; giai đoạn ra tai giữ 22-28°C, RH 85-95% và ánh sáng tán xạ. Nếu thiếu ẩm, tai nhỏ và khô mép; nếu quá ướt/bí, tai nhớt, mềm và dễ thối.",
+      "environment": {
+        "temperature": "Ủ tơ: 25-28°C. Ra quả thể: 22-28°C; trên 30°C kéo dài dễ làm tai mỏng, nhớt hoặc nhiễm tạp.",
+        "humidity": "Ra tai cần RH 85-95%. Khi tai đã lớn, giữ 85-90% và tăng thoáng để bề mặt không nhớt.",
+        "light": "Ánh sáng tán xạ khoảng 500 lux, 8-12 giờ/ngày giúp tai hình thành đều. Tránh nắng trực tiếp.",
+        "water": "Phun sương mịn 2-5 lần/ngày tùy thời tiết. Tai mộc nhĩ cần ẩm nhưng không để nước bẩn đọng lâu trên tai.",
+        "ventilation": "Thông gió nhẹ và đều. Không khí tù đọng làm tai biến dạng, mềm nhớt; gió khô trực tiếp làm tai khô mép."
+      },
+      "substrate": [
+        "Mùn cưa cao su/gỗ mềm phù hợp, sạch, không mốc; độ ẩm giá thể khoảng 60-65%.",
+        "Có thể phối cám gạo/cám mì 5-10% và vôi 1-2%; pH khoảng 6.5-7.5.",
+        "Bịch phôi phải được hấp/thanh trùng kỹ, tơ trắng đều trước khi rạch tạo điểm ra tai."
+      ],
+      "growing_steps": [
+        "Phối trộn mùn cưa, dinh dưỡng và vôi, chỉnh ẩm 60-65%, đóng bịch và hấp/thanh trùng.",
+        "Cấy giống sạch, ủ tơ 25-28°C trong khoảng 25-40 ngày đến khi tơ lan kín bịch.",
+        "Rạch bịch nhiều đường nhỏ hoặc mở điểm ra nấm theo quy trình, đưa vào phòng 22-28°C, RH 85-95%.",
+        "Duy trì ánh sáng tán xạ và phun sương mịn; tăng thông thoáng khi tai bắt đầu lớn để tránh nhớt.",
+        "Sau mỗi đợt thu, giảm tưới 1-2 ngày cho vết rạch hồi lại rồi tăng ẩm để kích đợt sau."
+      ],
+      "farmer_tips": [
+        "Tai khô mép, nhỏ: thiếu ẩm hoặc gió thổi trực tiếp.",
+        "Tai mềm nhớt, có mùi: quá ẩm, nước bẩn hoặc thiếu thông gió.",
+        "Tai mỏng và nhạt màu: thiếu dinh dưỡng, thiếu ẩm hoặc nhiệt quá cao."
+      ],
+      "harvest": "Thu khi tai mở đủ lớn, dày, đàn hồi, mép còn đẹp; có thể thu tươi hoặc phơi/sấy. Nếu để quá già, tai dai, mép khô và chất lượng giảm.",
+      "note": "Mộc nhĩ cần ẩm cao nhưng nước tưới phải sạch. Nếu dùng để sấy khô, cần sấy/phơi nhanh sau thu để tránh mốc sau thu hoạch."
+    }
+  }
+}
