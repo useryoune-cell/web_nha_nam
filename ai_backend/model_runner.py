@@ -300,3 +300,21 @@ def get_model_status():
             "generic_mold_logic": "green_mold, black_mold and white_mold are diagnosed as generic disease classes across mushroom species."
         }
     }
+
+def preload_models():
+    """Load model ngay khi app khởi động, tránh user đầu tiên phải chờ lâu."""
+    try:
+        if SPECIES_MODEL_TYPE in {"yolo", "yolo_cls", "yolov8"} and SPECIES_MODEL_PATH.exists():
+            from ultralytics import YOLO
+            _yolo_models["species"] = YOLO(str(SPECIES_MODEL_PATH))
+            print("[preload] Đã load species model thành công")
+    except Exception as e:
+        print(f"[preload] Lỗi load species model: {e}")
+
+    try:
+        if DIAGNOSIS_MODEL_TYPE in {"yolo", "yolo_cls", "yolov8"} and DIAGNOSIS_MODEL_PATH.exists():
+            from ultralytics import YOLO
+            _yolo_models["diagnosis"] = YOLO(str(DIAGNOSIS_MODEL_PATH))
+            print("[preload] Đã load diagnosis model thành công")
+    except Exception as e:
+        print(f"[preload] Lỗi load diagnosis model: {e}")

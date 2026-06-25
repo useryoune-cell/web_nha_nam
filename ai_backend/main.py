@@ -2,7 +2,7 @@ import json
 import tempfile
 from copy import deepcopy
 from pathlib import Path
-
+from model_runner import get_model_status, predict_diagnosis_image, predict_species_image, preload_models
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -126,3 +126,8 @@ def frontend_asset(asset_path: str):
         raise HTTPException(status_code=404, detail="Not found")
 
     return FileResponse(path)
+
+###
+@app.on_event("startup")
+def startup_event():
+    preload_models()
