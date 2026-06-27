@@ -1,9 +1,11 @@
-﻿{
-    "classes":  [
-                    "black_termite_mushroom",
-                    "lingzhi",
-                    "oyster_mushroom",
-                    "straw_mushroom",
-                    "wood_ear"
-                ]
+{
+  "classes": [
+    "black_termite_mushroom",
+    "enoki_mushroom",
+    "lingzhi",
+    "oyster_mushroom",
+    "shiitake_mushroom",
+    "straw_mushroom",
+    "wood_ear"
+  ]
 }

@@ -286,7 +286,18 @@
         "Tai nhớt, vàng, dễ thối: phun quá nhiều hoặc phòng bí ẩm, cần giảm nước và tăng thông thoáng."
       ],
       "harvest": "Thu khi mép tai còn hơi cong xuống, tai vừa bung, đường kính thường 5-10 cm tùy giống. Không để mép tai phẳng quá lâu vì nấm già nhanh, dai và phát tán nhiều bào tử.",
-      "note": "Thông số nên tinh chỉnh theo giống và thời tiết địa phương, nhưng cần luôn giữ 3 điểm chính: ẩm cao, không đọng nước, thông gió tốt."
+      "note": "Thông số nên tinh chỉnh theo giống và thời tiết địa phương, nhưng cần luôn giữ 3 điểm chính: ẩm cao, không đọng nước, thông gió tốt.",
+      "market_info": {
+        "suitable_regions": [
+          "Phù hợp hầu hết tỉnh có thể làm nhà nấm mát và ẩm: Đồng Nai, Bình Dương, TP.HCM, Long An, Trà Vinh, Nghệ An, Gia Lai, Đắk Lắk, Lâm Đồng.",
+          "Vùng nóng vẫn trồng được nếu nhà nấm giữ 18-30°C, RH 85-95% và thông gió tốt; vùng quá nóng nên chọn giống chịu nhiệt."
+        ],
+        "yield_reference": "Tham khảo 0,18-0,23 kg/bịch ở mô hình nhỏ; mô hình chăm tốt có thể đạt khoảng 1,0-1,1 kg/bịch trong 3 tháng thu hái. Một số trại 6.000-10.000 bịch thu 50-70 kg/ngày lúc cao điểm.",
+        "price_reference": "Giá bán tại trại/thương lái thường khoảng 35.000-50.000 đ/kg; bán lẻ hoặc vào đô thị có thể khoảng 55.000-60.000 đ/kg.",
+        "revenue_reference": "Mô hình nhỏ 80-250 m2 có thể lãi khoảng 8-15 triệu đồng/tháng nếu đầu ra ổn. Quy mô 6.000-10.000 bịch có thể cho dòng tiền trên 1 triệu đồng/ngày ở giai đoạn thu mạnh.",
+        "farmer_note": "Nấm bào ngư dễ bán và quay vòng nhanh nhưng lợi nhuận phụ thuộc tỷ lệ nhiễm mốc xanh, chất lượng phôi, điện nước và khả năng bán đều mỗi ngày.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
     },
     "lingzhi": {
       "name_vi": "Nấm linh chi",
@@ -324,7 +335,18 @@
         "Linh chi không cần tưới nhiều như bào ngư; ưu tiên ẩm không khí và nền thay vì làm ướt quả thể."
       ],
       "harvest": "Thu khi viền sinh trưởng màu trắng/vàng nhạt gần như hết, tai chuyển đỏ nâu bóng, cứng và bắt đầu có lớp bào tử nâu. Thường 60-90 ngày sau mở bịch tùy giống và điều kiện.",
-      "note": "Nếu bán dược liệu, cần quy trình sạch, phơi/sấy dưới 45-50°C để giữ màu và hạn chế mốc sau thu hoạch."
+      "note": "Nếu bán dược liệu, cần quy trình sạch, phơi/sấy dưới 45-50°C để giữ màu và hạn chế mốc sau thu hoạch.",
+      "market_info": {
+        "suitable_regions": [
+          "Phù hợp vùng có thể giữ nhà trồng 24-30°C: Lâm Đồng, Đồng Nai, Bình Phước, Thanh Hóa, Hải Phòng, Khánh Hòa, TP.HCM và các tỉnh có nguồn mùn cưa cao su/keo sạch.",
+          "Không cần vùng quá lạnh, nhưng cần nhà trồng sạch, ẩm cao lúc tạo mầm và có khu sấy/phơi sau thu hoạch."
+        ],
+        "yield_reference": "Năng suất phụ thuộc giống và công thức phôi. Tham khảo hiệu suất khoảng 12% theo nguyên liệu khô hoặc khoảng 102 kg nấm tươi/tấn nguyên liệu ở mô hình công nghệ cao; sau sấy khô khối lượng giảm mạnh.",
+        "price_reference": "Linh chi thường bán dạng khô, mặt bằng phổ biến khoảng 500.000-1.000.000 đ/kg tùy chủng loại, độ dày tai, màu sắc, chứng nhận và bao bì.",
+        "revenue_reference": "Mô hình có liên kết bao tiêu có thể đạt doanh thu rất cao, nhưng vốn đầu tư, thời gian quay vòng và yêu cầu sấy/bảo quản lớn hơn nấm ăn. Nên tính theo kg khô bán được, không tính theo kg tươi.",
+        "farmer_note": "Phù hợp hơn với hộ/trại có thương hiệu, bao bì, kênh bán dược liệu hoặc OCOP; nếu bán thô không có đầu ra, tồn kho và mốc sau sấy là rủi ro lớn.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
     },
     "black_termite_mushroom": {
       "name_vi": "Nấm mối đen",
@@ -362,7 +384,18 @@
         "Không thay quá nhiều yếu tố cùng lúc; mỗi lần chỉ chỉnh một yếu tố để biết nguyên nhân."
       ],
       "harvest": "Thu khi nấm đạt kích thước thương phẩm, mũ còn chắc, chưa già và chưa mềm nhũn. Nên hái cả cụm/nhổ nhẹ, vệ sinh chân nấm và tránh làm hỏng mầm kế tiếp.",
-      "note": "Thông số nấm mối đen phụ thuộc mạnh vào dòng giống thương mại; phần tư vấn này là khung thực hành để kiểm soát trại, không thay thế quy trình riêng của nhà cung cấp giống."
+      "note": "Thông số nấm mối đen phụ thuộc mạnh vào dòng giống thương mại; phần tư vấn này là khung thực hành để kiểm soát trại, không thay thế quy trình riêng của nhà cung cấp giống.",
+      "market_info": {
+        "suitable_regions": [
+          "Phù hợp mô hình phòng kín/phòng lạnh tại Đồng Tháp, Tiền Giang, Vĩnh Long, TP.HCM, Bình Dương, Đắk Lắk và các tỉnh có thể kiểm soát 24-28°C.",
+          "Không nên phụ thuộc khí hậu tự nhiên; nên dùng phôi thương mại và thử quy mô nhỏ trước khi mở rộng."
+        ],
+        "yield_reference": "Tham khảo mỗi túi phôi cho khoảng 0,30-0,35 kg trong chu kỳ thu 3,5-4 tháng. Một mô hình 8.000 phôi có thể thu trên 10 kg/ngày khi vào giai đoạn ổn định.",
+        "price_reference": "Giá bán thường cao hơn các nấm ăn phổ thông: khoảng 150.000-250.000 đ/kg theo phân loại ở một số mô hình, và bán lẻ loại đẹp có thể khoảng 250.000-350.000 đ/kg.",
+        "revenue_reference": "Mô hình vận hành ổn có thể mang lại khoảng 12-15 triệu đồng/tháng sau chi phí ở quy mô hộ; quy mô lớn cần tính kỹ tiền phôi, điện làm mát và tỷ lệ phôi hỏng.",
+        "farmer_note": "Giá cao nhưng kỹ thuật khó và chi phí phòng lạnh lớn. Nếu chưa có đầu ra cố định, nên bắt đầu 200-500 phôi để đo tỷ lệ ra nấm thật.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
     },
     "straw_mushroom": {
       "name_vi": "Nấm rơm",
@@ -399,7 +432,18 @@
         "Không dùng nước lạnh tưới mạnh vào mô đang ra nấm vì làm sốc nhiệt và giảm năng suất."
       ],
       "harvest": "Thu tốt nhất ở giai đoạn trứng hoặc búp, trước khi mũ bung. Thường bắt đầu thu sau 9-14 ngày tùy quy trình và thời tiết; nấm đã bung mũ thì chất lượng và giá bán giảm.",
-      "note": "Với nấm rơm, cảm biến nhiệt độ là quan trọng nhất. Nên đặt cảm biến gần mô nấm, không chỉ đo nhiệt độ phòng."
+      "note": "Với nấm rơm, cảm biến nhiệt độ là quan trọng nhất. Nên đặt cảm biến gần mô nấm, không chỉ đo nhiệt độ phòng.",
+      "market_info": {
+        "suitable_regions": [
+          "Rất hợp vùng nóng ẩm và có nhiều rơm rạ: Đồng Tháp, Vĩnh Long, Cần Thơ, Tiền Giang, Trà Vinh, An Giang, Kiên Giang, Long An, Sóc Trăng.",
+          "Miền Trung/Tây Nguyên vẫn làm được trong nhà trồng nếu giữ mô ấm 28-35°C và tránh lạnh ban đêm."
+        ],
+        "yield_reference": "Tham khảo mỗi bánh/mô rơm 25 kg có thể cho khoảng 2-2,5 kg nấm tươi; mô hình dùng meo có thể đạt khoảng 1,5 kg nấm/bọc meo tùy quy trình.",
+        "price_reference": "Giá thu mua thường biến động mạnh: loại đẹp có thể khoảng 70.000-90.000 đ/kg, loại thấp hơn khoảng 50.000-60.000 đ/kg; mùa rộ giá có thể giảm.",
+        "revenue_reference": "Chu kỳ nhanh 20-30 ngày. Mô hình vài trăm m2 nếu kiểm soát nhiệt/ẩm tốt có thể lãi trên 10 triệu đồng/tháng; mô hình lớn vài nghìn bọc meo có thể đạt lợi nhuận hàng chục đến khoảng 100 triệu đồng/vụ khi giá tốt.",
+        "farmer_note": "Rủi ro lớn nhất là sốc nhiệt, mưa/lạnh, rơm nhiễm thuốc và thu hoạch trễ làm bung mũ mất giá. Cần bán nhanh trong ngày hoặc có thương lái đặt trước.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
     },
     "wood_ear": {
       "name_vi": "Mộc nhĩ",
@@ -437,7 +481,118 @@
         "Tai mỏng và nhạt màu: thiếu dinh dưỡng, thiếu ẩm hoặc nhiệt quá cao."
       ],
       "harvest": "Thu khi tai mở đủ lớn, dày, đàn hồi, mép còn đẹp; có thể thu tươi hoặc phơi/sấy. Nếu để quá già, tai dai, mép khô và chất lượng giảm.",
-      "note": "Mộc nhĩ cần ẩm cao nhưng nước tưới phải sạch. Nếu dùng để sấy khô, cần sấy/phơi nhanh sau thu để tránh mốc sau thu hoạch."
+      "note": "Mộc nhĩ cần ẩm cao nhưng nước tưới phải sạch. Nếu dùng để sấy khô, cần sấy/phơi nhanh sau thu để tránh mốc sau thu hoạch.",
+      "market_info": {
+        "suitable_regions": [
+          "Phù hợp vùng có nguồn mùn cưa/gỗ sạch và nhà trồng ẩm: Bình Phước, Đồng Nai, Tây Ninh, Lâm Đồng, Đắk Nông, Nghệ An, Hà Nội ngoại thành và các tỉnh trung du miền núi phía Bắc.",
+          "Có thể trồng tươi hoặc làm hàng khô; vùng có nắng/sấy tốt sẽ thuận lợi hơn cho bảo quản sau thu hoạch."
+        ],
+        "yield_reference": "Tham khảo mô hình 10.000 bịch có thể thu khoảng 350-400 kg mộc nhĩ khô/vụ; một số mô hình thu khoảng 600 kg thành phẩm/lần, chu kỳ thu khoảng 50 ngày/lần.",
+        "price_reference": "Mộc nhĩ thường hạch toán theo hàng khô. Giá tham khảo khoảng 110.000-130.000 đ/kg khô với sản phẩm phổ thông; hàng sạch, đóng gói đẹp hoặc OCOP có thể cao hơn.",
+        "revenue_reference": "Mô hình hộ quy mô khá có thể đạt lợi nhuận trên 100 triệu đồng/năm; quy mô lớn 20.000 bịch từng được ghi nhận lãi 300-400 triệu đồng/năm khi đầu ra ổn định.",
+        "farmer_note": "Không so trực tiếp giá tươi với giá khô. Cần tính hao hụt sấy/phơi, công hái, tỷ lệ tai mốc sau thu hoạch và chi phí bao bì.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
+    },
+    "enoki_mushroom": {
+      "name_vi": "Nấm kim châm",
+      "scientific_name": "Flammulina velutipes",
+      "aliases": [
+        "enoki",
+        "enoki mushroom",
+        "Flammulina velutipes",
+        "nấm kim châm"
+      ],
+      "can_grow": "Trồng được, nhưng khó hơn nấm bào ngư vì cần giai đoạn ra quả thể ở nhiệt độ thấp. Phù hợp nhà trồng có khả năng làm mát hoặc vùng khí hậu mát.",
+      "difficulty": "Trung bình đến khó",
+      "overview": "Nấm kim châm có thân dài, mảnh, màu trắng/kem khi trồng trong điều kiện thiếu sáng có kiểm soát và CO2 cao vừa phải. Điểm quan trọng nhất là tách rõ giai đoạn ủ tơ 22-25°C và giai đoạn kích thích ra quả thể lạnh khoảng 10-15°C. Nếu nhiệt cao, nấm dễ thân ngắn, vàng, mũ to và chất lượng kém.",
+      "environment": {
+        "temperature": "Ủ tơ: 22-25°C. Kích thích ra mầm: 10-13°C trong vài ngày. Nuôi quả thể: 10-15°C; trên 18°C chất lượng giảm rõ, thân ngắn và dễ vàng.",
+        "humidity": "Ủ tơ giữ bịch/chai kín. Khi ra quả thể duy trì RH 85-95%; nếu đầu nấm khô thì tăng ẩm, nếu có nhớt/nước đọng thì giảm tưới và tăng thông gió nhẹ.",
+        "light": "Cần ánh sáng rất yếu hoặc tán xạ thấp, khoảng 50-200 lux. Ánh sáng mạnh làm mũ phát triển to và thân không dài đẹp.",
+        "water": "Không tưới trực tiếp mạnh lên chùm nấm. Chủ yếu tạo ẩm không khí/phòng, phun sương mịn khi cần; tránh giọt nước bám lâu trên đầu nấm.",
+        "ventilation": "Cần thông gió nhẹ. CO2 tương đối cao giúp thân kéo dài, nhưng nếu quá bí sẽ làm nấm yếu, dị dạng hoặc nhớt. Nếu có cảm biến, giữ CO2 khoảng 2000-5000 ppm trong giai đoạn kéo thân và tăng gió nếu nấm mềm/nhớt."
+      },
+      "substrate": [
+        "Mùn cưa gỗ mềm/gỗ cứng phù hợp, lõi bắp hoặc phụ phẩm sạch; độ ẩm giá thể khoảng 60-65%.",
+        "Có thể phối cám gạo/cám mì 10-20% tùy công thức, thêm vôi nhẹ để pH khoảng 6.0-7.0.",
+        "Nấm kim châm thường hợp mô hình chai/lọ hoặc túi cổ cao để định hướng thân dài và giữ cụm thẳng."
+      ],
+      "growing_steps": [
+        "Phối trộn giá thể, chỉnh ẩm 60-65%, đóng chai/túi và hấp/thanh trùng kỹ.",
+        "Cấy giống sạch, ủ tơ 22-25°C trong khoảng 20-30 ngày đến khi tơ lan kín.",
+        "Sau khi tơ kín, chuyển sang giai đoạn kích lạnh 10-13°C, RH 85-95% để tạo mầm.",
+        "Khi mầm xuất hiện, giữ 10-15°C, ánh sáng yếu 50-200 lux, thông gió nhẹ và dùng cổ áo/bao hướng cụm nếu cần thân dài.",
+        "Theo dõi hằng ngày: nếu đầu khô tăng ẩm; nếu cụm nhớt hoặc có mùi thì giảm ẩm và tăng gió."
+      ],
+      "farmer_tips": [
+        "Không có làm mát thì nấm kim châm rất khó đạt chất lượng thương phẩm ở vùng nóng.",
+        "Mũ to, thân ngắn: thường do nhiệt cao, ánh sáng mạnh hoặc CO2 quá thấp.",
+        "Cụm mềm nhớt: thường do ẩm quá cao, thiếu gió hoặc nước đọng."
+      ],
+      "harvest": "Thu khi thân dài đều, mũ còn nhỏ, cụm chắc và chưa già. Cắt cả cụm sát gốc, tránh kéo làm rách giá thể.",
+      "note": "Nếu dùng cảm biến nhà kính, ưu tiên kiểm soát nhiệt độ trước; đây là yếu tố quyết định nhất với nấm kim châm.",
+      "market_info": {
+        "suitable_regions": [
+          "Phù hợp nhất nơi khí hậu mát hoặc có kho/phòng lạnh: Đà Lạt - Lâm Đồng, Sa Pa - Lào Cai, Mộc Châu - Sơn La, một số khu công nghệ cao có làm mát chủ động.",
+          "Vùng nóng như Đông Nam Bộ/ĐBSCL chỉ nên làm nếu có phòng lạnh 10-15°C cho giai đoạn ra quả thể."
+        ],
+        "yield_reference": "Năng suất phụ thuộc công nghệ chai/túi và phòng lạnh. Mô hình công nghiệp có thể đạt hàng trăm kg đến vài tấn/ngày; hộ nhỏ nên test 500-1.000 chai/túi để tính năng suất thực tế trước.",
+        "price_reference": "Giá bán lẻ thường quanh 70.000-100.000 đ/kg hoặc hơn tùy kênh; từng có nguồn sản xuất trong nước bán khoảng 50.000 đ/kg, nhưng giá rẻ bất thường cần kiểm tra nguồn gốc/chất lượng.",
+        "revenue_reference": "Doanh thu cao nếu sản xuất đều và vào siêu thị/nhà hàng, nhưng chi phí điện lạnh, phòng sạch, chai/túi và hao hụt lớn. Không nên tính lợi nhuận nếu chưa có số điện lạnh thực tế.",
+        "farmer_note": "Nấm kim châm là loại nên làm theo hướng công nghệ cao. Với nông hộ không có làm mát, khuyến nghị không đầu tư lớn.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
+    },
+    "shiitake_mushroom": {
+      "name_vi": "Nấm hương",
+      "scientific_name": "Lentinula edodes",
+      "aliases": [
+        "shiitake",
+        "shiitake mushroom",
+        "Lentinula edodes",
+        "nấm hương"
+      ],
+      "can_grow": "Trồng được trên mùn cưa gỗ cứng hoặc khúc gỗ. Cần chu kỳ dài và có giai đoạn kích thích bằng sốc nhiệt/ẩm để ra quả thể đều.",
+      "difficulty": "Trung bình đến khó",
+      "overview": "Nấm hương có mũ nâu, thịt chắc, giá trị cao nhưng yêu cầu giá thể gỗ phù hợp và thời gian ủ lâu. Giai đoạn ủ tơ thường 22-26°C, sau đó cần giai đoạn hóa nâu/chín phôi và kích thích ra quả thể mát hơn khoảng 12-20°C. Nếu quá nóng hoặc quá ẩm bí, nấm dễ dị dạng, thối và nhiễm mốc.",
+      "environment": {
+        "temperature": "Ủ tơ: 22-26°C. Hóa nâu/chín phôi: 18-24°C. Ra quả thể: 12-20°C là đẹp; một số giống chịu 18-24°C nhưng chất lượng thường kém hơn khi quá nóng.",
+        "humidity": "Ra quả thể giữ RH 85-95% lúc tạo mầm, sau đó 80-90% khi mũ phát triển. Tránh nước đọng trên mũ vì dễ thối và đốm.",
+        "light": "Ánh sáng tán xạ 500-1000 lux, 8-12 giờ/ngày. Thiếu sáng nấm dễ cuống dài, mũ nhỏ; nắng trực tiếp làm khô/nứt mũ.",
+        "water": "Tạo ẩm bằng phun sương mịn. Với phôi đã chín có thể sốc nước/lạnh theo quy trình giống, nhưng sau khi mầm xuất hiện không tưới mạnh trực tiếp lên mũ.",
+        "ventilation": "Thông gió vừa đến tốt. CO2 cao làm cuống dài và mũ nhỏ; nếu có cảm biến nên giữ CO2 dưới khoảng 1000-1500 ppm khi mũ đang phát triển."
+      },
+      "substrate": [
+        "Mùn cưa gỗ cứng sạch là phù hợp nhất; tránh gỗ có tinh dầu mạnh hoặc mùn đã mốc.",
+        "Công thức tham khảo: mùn cưa gỗ cứng 100 kg + cám 10-20 kg + vôi/thạch cao lượng nhỏ, độ ẩm 60-65%.",
+        "Phôi cần ủ đủ lâu để tơ kín, săn chắc và chuyển màu nâu trước khi kích thích ra quả thể."
+      ],
+      "growing_steps": [
+        "Phối trộn giá thể gỗ, đóng bịch và hấp/thanh trùng kỹ vì chu kỳ nấm hương dài, rất sợ nhiễm tạp.",
+        "Cấy giống sạch, ủ tơ 22-26°C trong khoảng 45-90 ngày tùy giống và kích thước bịch.",
+        "Chờ phôi hóa nâu/chín phôi, bề mặt săn chắc; không kích quá sớm khi phôi còn non.",
+        "Kích thích ra nấm bằng thay đổi nhiệt/ẩm hoặc ngâm/sốc lạnh theo quy trình giống, sau đó đưa vào phòng 12-20°C, RH 85-95%, ánh sáng tán xạ.",
+        "Khi mũ lớn dần, giữ RH 80-90%, tăng thông gió để mũ dày, ít thối và không cuống dài."
+      ],
+      "farmer_tips": [
+        "Phôi chưa hóa nâu mà kích sớm thường ra kém hoặc dễ nhiễm.",
+        "Mũ nứt có thể do khô hoặc dao động ẩm mạnh; mũ nhớt/thối do ướt lâu và thiếu gió.",
+        "Nấm hương cần ghi chép ngày cấy, ngày tơ kín, ngày hóa nâu và ngày kích để tối ưu lứa sau."
+      ],
+      "harvest": "Thu khi mũ mở khoảng 60-80%, mép còn hơi cuộn xuống, thịt chắc. Không để mũ phẳng quá lâu vì nấm già, giảm chất lượng và dễ nứt.",
+      "note": "Nấm hương phù hợp mô hình có kiểm soát nhiệt/ẩm tốt. Nếu vùng nóng, cần chọn giống chịu nhiệt hoặc có giải pháp làm mát.",
+      "market_info": {
+        "suitable_regions": [
+          "Phù hợp vùng mát/cao: Lạc Dương - Lâm Đồng, Đà Lạt, Sa Pa - Lào Cai, Mộc Châu - Sơn La, Cao Bằng, Lạng Sơn, Hà Giang.",
+          "Vùng nóng vẫn có thể làm bằng nhà lạnh/giống chịu nhiệt nhưng rủi ro mũ mỏng, dị dạng và nhiễm mốc cao hơn."
+        ],
+        "yield_reference": "Tham khảo mô hình nhà nấm ở Lạc Dương đạt khoảng 1,5 tấn/nhà/vụ trong hơn 3 tháng. Quy mô 800 m2 có thể tạo thu nhập 20-30 triệu đồng/tháng nếu liên kết bao tiêu tốt.",
+        "price_reference": "Giá thu mua trong mô hình liên kết từng ở mức khoảng 70.000 đ/kg tươi; giá bán lẻ nấm hương tươi/khô thay đổi mạnh theo vùng, loại hàng và bao bì.",
+        "revenue_reference": "Một nhà nấm nhỏ có thể lãi khoảng 5-10 triệu đồng/tháng; mô hình 800 m2 có thể đạt 20-30 triệu đồng/tháng nếu quy trình ổn và có đơn vị thu mua.",
+        "farmer_note": "Nấm hương cần chu kỳ ủ lâu và phôi phải hóa nâu/chín phôi. Nên ưu tiên hợp đồng bao tiêu hoặc kênh bán ổn định trước khi mở rộng.",
+        "source_note": "Ước tính tham khảo, cập nhật ngày 28/06/2026 từ các bài khuyến nông/báo nông nghiệp và mặt bằng thị trường. Giá và doanh thu thay đổi theo mùa, chất lượng, quy mô, hao hụt, kênh bán và hợp đồng bao tiêu; cần khảo sát đầu mối địa phương trước khi đầu tư."
+      }
     }
   }
 }

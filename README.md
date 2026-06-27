@@ -42,8 +42,10 @@ Các lớp loài nấm:
 
 ```text
 black_termite_mushroom
+enoki_mushroom
 lingzhi
 oyster_mushroom
+shiitake_mushroom
 straw_mushroom
 wood_ear
 ```
@@ -140,8 +142,10 @@ Folder test đã có mỗi lớp 1 ảnh:
 ```text
 test/species/
 ├── black_termite_mushroom.jpg
+├── enoki_mushroom.jpg
 ├── lingzhi.jpg
 ├── oyster_mushroom.jpg
+├── shiitake_mushroom.jpg
 ├── straw_mushroom.jpg
 └── wood_ear.jpg
 

@@ -664,12 +664,7 @@ body {
 }
 
 .confidence-pill {
-  flex: 0 0 auto;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #dcfce7;
-  color: #15803d;
-  font-weight: 800;
+  display: none !important;
 }
 
 .result-section {
@@ -715,6 +710,12 @@ body {
   display: block;
   color: #0f172a;
   margin-bottom: 4px;
+}
+
+.result-section .muted-note {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 13px;
 }
 
 .warning-section {

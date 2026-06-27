@@ -746,11 +746,42 @@ function renderEnvironment(environment = {}) {
   `;
 }
 
+function renderMarketInfo(market = {}) {
+  const formatValue = (value) => {
+    if (Array.isArray(value)) return value.join("; ");
+    return value;
+  };
+
+  const entries = [
+    ["Vùng/tỉnh phù hợp", formatValue(market.suitable_regions)],
+    ["Năng suất tham khảo", market.yield_reference],
+    ["Giá bán tham khảo", market.price_reference],
+    ["Doanh thu/lợi nhuận ước tính", market.revenue_reference],
+    ["Lưu ý thị trường", market.farmer_note]
+  ].filter(([, value]) => value);
+
+  if (entries.length === 0) return "";
+
+  return `
+    <section class="result-section">
+      <h4>Vùng trồng và hiệu quả kinh tế</h4>
+      <div class="environment-grid">
+        ${entries.map(([label, value]) => `
+          <div class="environment-item">
+            <strong>${label}</strong>
+            <span>${value}</span>
+          </div>
+        `).join("")}
+      </div>
+      ${market.source_note ? `<p class="muted-note">${market.source_note}</p>` : ""}
+    </section>
+  `;
+}
+
 function renderAiResult(result) {
   if (!aiResult) return;
 
   const advice = result.advice || {};
-  const confidence = Math.round((Number(result.confidence) || 0) * 100);
   const speciesName = result.species_name || advice.name_vi || "Chưa xác định";
   const scientificName = result.scientific_name || advice.scientific_name || "";
 
@@ -760,7 +791,6 @@ function renderAiResult(result) {
         <h3>${speciesName}</h3>
         <p>${scientificName ? `${scientificName} · ` : ""}Độ khó: ${advice.difficulty || "Chưa đánh giá"}</p>
       </div>
-      <span class="confidence-pill">${confidence}%</span>
     </div>
 
     <section class="result-section">
@@ -776,6 +806,7 @@ function renderAiResult(result) {
     ` : ""}
 
     ${renderEnvironment(advice.environment)}
+    ${renderMarketInfo(advice.market_info)}
     ${renderList("Giá thể phù hợp", advice.substrate)}
     ${renderList("Quy trình gợi ý", advice.growing_steps)}
     ${renderList("Lưu ý cho nông dân", advice.farmer_tips)}
@@ -810,7 +841,6 @@ function renderDiagnosisResult(result) {
   if (!aiDiagnosisResult) return;
 
   const advice = result.advice || {};
-  const confidence = Math.round((Number(result.confidence) || 0) * 100);
   const diagnosisName = result.diagnosis_name || advice.name_vi || "Chưa xác định";
 
   aiDiagnosisResult.innerHTML = `
@@ -819,7 +849,6 @@ function renderDiagnosisResult(result) {
         <h3>${diagnosisName}</h3>
         <p>Mức độ: ${advice.severity || "Chưa đánh giá"}</p>
       </div>
-      <span class="confidence-pill">${confidence}%</span>
     </div>
 
     ${advice.summary ? `

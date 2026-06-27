@@ -2,12 +2,12 @@ import json
 import tempfile
 from copy import deepcopy
 from pathlib import Path
-from model_runner import get_model_status, predict_diagnosis_image, predict_species_image, preload_models
+
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
-from model_runner import get_model_status, predict_diagnosis_image, predict_species_image
+from model_runner import get_model_status, predict_diagnosis_image, predict_species_image, preload_models
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -127,7 +127,7 @@ def frontend_asset(asset_path: str):
 
     return FileResponse(path)
 
-###
+
 @app.on_event("startup")
 def startup_event():
     preload_models()

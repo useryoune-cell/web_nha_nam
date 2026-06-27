@@ -2,8 +2,10 @@ Danh sach lop AI_Green hien tai
 
 1. Lop nhan dang loai nam
 - black_termite_mushroom
+- enoki_mushroom
 - lingzhi
 - oyster_mushroom
+- shiitake_mushroom
 - straw_mushroom
 - wood_ear
 

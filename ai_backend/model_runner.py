@@ -30,8 +30,10 @@ DIAGNOSIS_CLASSES_PATH = Path(
 
 SPECIES_CLASSES = [
     "black_termite_mushroom",
+    "enoki_mushroom",
     "lingzhi",
     "oyster_mushroom",
+    "shiitake_mushroom",
     "straw_mushroom",
     "wood_ear"
 ]
@@ -53,6 +55,12 @@ SPECIES_ALIASES = {
     "nam_bao_ngu": "oyster_mushroom",
     "bao_ngu": "oyster_mushroom",
     "nam_so": "oyster_mushroom",
+    "enoki": "enoki_mushroom",
+    "enoki_mushroom": "enoki_mushroom",
+    "flammulina": "enoki_mushroom",
+    "flammulina_velutipes": "enoki_mushroom",
+    "kim_cham": "enoki_mushroom",
+    "nam_kim_cham": "enoki_mushroom",
     "lingzhi": "lingzhi",
     "linh_chi": "lingzhi",
     "nam_linh_chi": "lingzhi",
@@ -64,6 +72,12 @@ SPECIES_ALIASES = {
     "termitomyces": "black_termite_mushroom",
     "nam_moi": "black_termite_mushroom",
     "nam_moi_den": "black_termite_mushroom",
+    "shiitake": "shiitake_mushroom",
+    "shiitake_mushroom": "shiitake_mushroom",
+    "lentinula": "shiitake_mushroom",
+    "lentinula_edodes": "shiitake_mushroom",
+    "nam_huong": "shiitake_mushroom",
+    "huong": "shiitake_mushroom",
     "straw_mushroom": "straw_mushroom",
     "volvariella": "straw_mushroom",
     "volvariella_volvacea": "straw_mushroom",
@@ -301,20 +315,21 @@ def get_model_status():
         }
     }
 
+
 def preload_models():
-    """Load model ngay khi app khởi động, tránh user đầu tiên phải chờ lâu."""
+    """Load YOLO models at startup when model files are available."""
     try:
         if SPECIES_MODEL_TYPE in {"yolo", "yolo_cls", "yolov8"} and SPECIES_MODEL_PATH.exists():
             from ultralytics import YOLO
             _yolo_models["species"] = YOLO(str(SPECIES_MODEL_PATH))
-            print("[preload] Đã load species model thành công")
-    except Exception as e:
-        print(f"[preload] Lỗi load species model: {e}")
+            print("[preload] Loaded species model")
+    except Exception as exc:
+        print(f"[preload] Failed to load species model: {exc}")
 
     try:
         if DIAGNOSIS_MODEL_TYPE in {"yolo", "yolo_cls", "yolov8"} and DIAGNOSIS_MODEL_PATH.exists():
             from ultralytics import YOLO
             _yolo_models["diagnosis"] = YOLO(str(DIAGNOSIS_MODEL_PATH))
-            print("[preload] Đã load diagnosis model thành công")
-    except Exception as e:
-        print(f"[preload] Lỗi load diagnosis model: {e}")
+            print("[preload] Loaded diagnosis model")
+    except Exception as exc:
+        print(f"[preload] Failed to load diagnosis model: {exc}")
