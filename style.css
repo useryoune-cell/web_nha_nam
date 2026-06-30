@@ -542,6 +542,31 @@ body {
   background: #ffffff;
 }
 
+.ai-camera-status {
+  width: 100%;
+  min-height: 64px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 14px;
+  border: 1px dashed #b7d4c5;
+  background: #eef8f2;
+  color: #145c43;
+  font-weight: 800;
+}
+
+.ai-camera-status[hidden] {
+  display: none;
+}
+
+.ai-camera-status i,
+.analyze-btn i[data-lucide="loader-circle"],
+.ai-action-btn i[data-lucide="loader-circle"] {
+  animation: spin 0.9s linear infinite;
+}
+
 .ai-preview-box {
   display: flex;
   align-items: center;
@@ -561,6 +586,12 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .ai-result {

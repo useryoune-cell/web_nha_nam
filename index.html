@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WEB NHÀ NẤM</title>
 
-  <link rel="stylesheet" href="style.css?v=20260630-camera-fix" />
+  <link rel="stylesheet" href="style.css?v=20260630-camera-fast" />
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -224,7 +224,12 @@
             </button>
           </div>
 
-          <video id="aiCameraView" class="ai-camera" autoplay playsinline hidden></video>
+          <div id="aiCameraStatus" class="ai-camera-status" hidden>
+            <i data-lucide="loader-circle"></i>
+            Đang mở camera...
+          </div>
+
+          <video id="aiCameraView" class="ai-camera" autoplay playsinline muted hidden></video>
 
           <button id="captureCameraBtn" class="secondary-btn" type="button" hidden>
             <i data-lucide="aperture"></i>
@@ -263,7 +268,7 @@
     </section>
   </div>
 
-  <script type="module" src="app.js?v=20260630-camera-fix"></script>
+  <script type="module" src="app.js?v=20260630-camera-fast"></script>
 
   <!-- KÍCH HOẠT ICON -->
   <script>

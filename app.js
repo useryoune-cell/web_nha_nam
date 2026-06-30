@@ -611,6 +611,7 @@ const aiPreviewEmpty = document.getElementById("aiPreviewEmpty");
 const openCameraBtn = document.getElementById("openCameraBtn");
 const captureCameraBtn = document.getElementById("captureCameraBtn");
 const aiCameraView = document.getElementById("aiCameraView");
+const aiCameraStatus = document.getElementById("aiCameraStatus");
 const analyzeAiGreenBtn = document.getElementById("analyzeAiGreenBtn");
 const aiResult = document.getElementById("aiResult");
 const aiDiagnosisResult = document.getElementById("aiDiagnosisResult");
@@ -647,6 +648,21 @@ function stopAiCamera() {
   if (captureCameraBtn) {
     captureCameraBtn.hidden = true;
   }
+}
+
+function setCameraOpening(isOpening) {
+  if (aiCameraStatus) {
+    aiCameraStatus.hidden = !isOpening;
+  }
+
+  if (openCameraBtn) {
+    openCameraBtn.disabled = isOpening;
+    openCameraBtn.innerHTML = isOpening
+      ? `<i data-lucide="loader-circle"></i> Đang mở...`
+      : `<i data-lucide="camera"></i> Mở camera`;
+  }
+
+  refreshIcons();
 }
 
 function closeAiGreenModal() {
@@ -708,6 +724,25 @@ function renderAiError(message) {
   resultEl.innerHTML = `<div class="ai-error">${message}</div>`;
 }
 
+function waitForCameraReady(videoEl) {
+  if (!videoEl) return Promise.resolve();
+  if (videoEl.readyState >= 2 && videoEl.videoWidth > 0) return Promise.resolve();
+
+  return new Promise((resolve) => {
+    const timeout = window.setTimeout(resolve, 2500);
+
+    videoEl.onloadedmetadata = () => {
+      window.clearTimeout(timeout);
+      resolve();
+    };
+
+    videoEl.oncanplay = () => {
+      window.clearTimeout(timeout);
+      resolve();
+    };
+  });
+}
+
 function isLocalhost() {
   return ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
 }
@@ -743,7 +778,11 @@ function getCameraErrorMessage(error) {
 async function requestAiCameraStream() {
   try {
     return await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: { ideal: "environment" } },
+      video: {
+        facingMode: { ideal: "environment" },
+        width: { ideal: 960, max: 1280 },
+        height: { ideal: 720, max: 720 }
+      },
       audio: false
     });
   } catch (error) {
@@ -980,14 +1019,17 @@ if (openCameraBtn) {
   openCameraBtn.addEventListener("click", async () => {
     try {
       stopAiCamera();
+      setCameraOpening(true);
 
       if (!window.isSecureContext && !isLocalhost()) {
+        setCameraOpening(false);
         openNativeCameraPicker();
         renderAiError("Camera trực tiếp chỉ hoạt động trên HTTPS hoặc localhost. Hệ thống đã chuyển sang chế độ chụp/tải ảnh bằng trình duyệt.");
         return;
       }
 
       if (!navigator.mediaDevices?.getUserMedia) {
+        setCameraOpening(false);
         openNativeCameraPicker();
         renderAiError("Trình duyệt không hỗ trợ mở camera trực tiếp. Hệ thống đã chuyển sang chế độ chụp/tải ảnh bằng trình duyệt.");
         return;
@@ -996,15 +1038,20 @@ if (openCameraBtn) {
       aiCameraStream = await requestAiCameraStream();
 
       aiCameraView.srcObject = aiCameraStream;
+      aiCameraView.muted = true;
+      aiCameraView.playsInline = true;
       aiCameraView.hidden = false;
-      captureCameraBtn.hidden = false;
       await aiCameraView.play();
+      await waitForCameraReady(aiCameraView);
+      captureCameraBtn.hidden = false;
     } catch (error) {
       console.error("Lỗi mở camera:", error);
       if (error?.name !== "NotAllowedError" && error?.name !== "SecurityError") {
         openNativeCameraPicker();
       }
       renderAiError(getCameraErrorMessage(error));
+    } finally {
+      setCameraOpening(false);
     }
   });
 }
