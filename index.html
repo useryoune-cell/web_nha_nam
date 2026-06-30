@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WEB NHÀ NẤM</title>
 
-  <link rel="stylesheet" href="style.css?v=20260628-no-confidence" />
+  <link rel="stylesheet" href="style.css?v=20260630-camera-fix" />
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -216,6 +216,7 @@
               Chọn ảnh
             </label>
             <input id="aiImageInput" type="file" accept="image/*" hidden />
+            <input id="aiCameraInput" type="file" accept="image/*" capture="environment" hidden />
 
             <button id="openCameraBtn" class="ai-action-btn" type="button">
               <i data-lucide="camera"></i>
@@ -262,7 +263,7 @@
     </section>
   </div>
 
-  <script type="module" src="app.js?v=20260628-no-confidence"></script>
+  <script type="module" src="app.js?v=20260630-camera-fix"></script>
 
   <!-- KÍCH HOẠT ICON -->
   <script>

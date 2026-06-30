@@ -605,6 +605,7 @@ const closeAiGreenBtn = document.getElementById("closeAiGreenBtn");
 const aiModeButtons = document.querySelectorAll("[data-ai-mode]");
 const aiModePanels = document.querySelectorAll("[data-ai-panel]");
 const aiImageInput = document.getElementById("aiImageInput");
+const aiCameraInput = document.getElementById("aiCameraInput");
 const aiImagePreview = document.getElementById("aiImagePreview");
 const aiPreviewEmpty = document.getElementById("aiPreviewEmpty");
 const openCameraBtn = document.getElementById("openCameraBtn");
@@ -705,6 +706,56 @@ function renderAiError(message) {
   const resultEl = getActiveAiResultElement();
   if (!resultEl) return;
   resultEl.innerHTML = `<div class="ai-error">${message}</div>`;
+}
+
+function isLocalhost() {
+  return ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+}
+
+function openNativeCameraPicker() {
+  if (!aiCameraInput) return false;
+  aiCameraInput.click();
+  return true;
+}
+
+function getCameraErrorMessage(error) {
+  const name = error?.name || "";
+
+  if (name === "NotAllowedError" || name === "SecurityError") {
+    return "Trình duyệt đang chặn quyền camera. Hãy cho phép quyền camera trong thanh địa chỉ rồi thử lại.";
+  }
+
+  if (name === "NotFoundError" || name === "DevicesNotFoundError") {
+    return "Thiết bị không tìm thấy camera. Bạn có thể dùng nút Chọn ảnh để tải ảnh lên.";
+  }
+
+  if (name === "NotReadableError" || name === "TrackStartError") {
+    return "Camera đang bị ứng dụng khác sử dụng hoặc chưa sẵn sàng. Hãy đóng ứng dụng camera khác rồi thử lại.";
+  }
+
+  if (name === "OverconstrainedError" || name === "ConstraintNotSatisfiedError") {
+    return "Không mở được camera sau. Hệ thống sẽ thử dùng camera mặc định.";
+  }
+
+  return "Không mở được camera. Hãy kiểm tra quyền truy cập camera của trình duyệt.";
+}
+
+async function requestAiCameraStream() {
+  try {
+    return await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal: "environment" } },
+      audio: false
+    });
+  } catch (error) {
+    if (error?.name === "OverconstrainedError" || error?.name === "ConstraintNotSatisfiedError") {
+      return navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+      });
+    }
+
+    throw error;
+  }
 }
 
 function renderList(title, items) {
@@ -914,25 +965,46 @@ if (aiImageInput) {
   });
 }
 
+if (aiCameraInput) {
+  aiCameraInput.addEventListener("change", () => {
+    const file = aiCameraInput.files?.[0];
+    if (file) {
+      setAiPreview(file);
+      stopAiCamera();
+      aiCameraInput.value = "";
+    }
+  });
+}
+
 if (openCameraBtn) {
   openCameraBtn.addEventListener("click", async () => {
     try {
-      if (!navigator.mediaDevices?.getUserMedia) {
-        renderAiError("Trình duyệt không hỗ trợ mở camera trực tiếp.");
+      stopAiCamera();
+
+      if (!window.isSecureContext && !isLocalhost()) {
+        openNativeCameraPicker();
+        renderAiError("Camera trực tiếp chỉ hoạt động trên HTTPS hoặc localhost. Hệ thống đã chuyển sang chế độ chụp/tải ảnh bằng trình duyệt.");
         return;
       }
 
-      aiCameraStream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "environment" },
-        audio: false
-      });
+      if (!navigator.mediaDevices?.getUserMedia) {
+        openNativeCameraPicker();
+        renderAiError("Trình duyệt không hỗ trợ mở camera trực tiếp. Hệ thống đã chuyển sang chế độ chụp/tải ảnh bằng trình duyệt.");
+        return;
+      }
+
+      aiCameraStream = await requestAiCameraStream();
 
       aiCameraView.srcObject = aiCameraStream;
       aiCameraView.hidden = false;
       captureCameraBtn.hidden = false;
+      await aiCameraView.play();
     } catch (error) {
       console.error("Lỗi mở camera:", error);
-      renderAiError("Không mở được camera. Hãy kiểm tra quyền truy cập camera của trình duyệt.");
+      if (error?.name !== "NotAllowedError" && error?.name !== "SecurityError") {
+        openNativeCameraPicker();
+      }
+      renderAiError(getCameraErrorMessage(error));
     }
   });
 }
